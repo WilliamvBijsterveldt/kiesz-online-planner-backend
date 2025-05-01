@@ -1,0 +1,6 @@
+﻿services:
+  kiesz-online-planner-backend:
+    image: kiesz-online-planner-backend
+    build:
+      context: .
+      dockerfile: kiesz-online-planner-backend/Dockerfile
