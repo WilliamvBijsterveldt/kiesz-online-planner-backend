@@ -1,0 +1,6 @@
+@kiesz_online_planner_backend_HostAddress = http://localhost:5106
+
+GET {{kiesz_online_planner_backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
