@@ -17,8 +17,7 @@ public class PatientService: IPatientService
     }
     public async Task<IEnumerable<Patient>> GetPatients(string value)
     {
-        _httpClient.DefaultRequestHeaders.Authorization =
-            new AuthenticationHeaderValue("ODFHIR", "je6ASQjGvtBfpykD/4fUpRASbKGdeBXre");
+        value = "262555815";
         
         var response =
             await _httpClient.GetAsync(
@@ -27,13 +26,12 @@ public class PatientService: IPatientService
         if (response.IsSuccessStatusCode)
         {
             var responseBody = await response.Content.ReadAsStringAsync();
-            // Console.WriteLine(responseBody);
             
             var patients = JsonConvert.DeserializeObject<IEnumerable<Patient>>(responseBody);
 
             return patients;
         }
         
-        return Array.Empty<Patient>();
+        return [];
     }
 }

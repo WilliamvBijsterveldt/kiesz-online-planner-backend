@@ -11,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<IPatientService, PatientService>();
 builder.Services.AddSingleton<IAppointmentService, AppointmentService>();
+builder.Services.AddSingleton<IMapperService, MapperService>();
 builder.Services.AddHttpClient();
 
 var app = builder.Build();
